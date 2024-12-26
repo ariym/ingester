@@ -1,4 +1,5 @@
-function pizza() {
-  console.log('pizza');
+function saySomething(msg: string): void {
+  console.log(msg);
 }
-pizza();
+
+saySomething('pizza');

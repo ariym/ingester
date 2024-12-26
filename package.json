@@ -1,29 +1,19 @@
 {
-  "name": "base-ts-nodemon",
-  "version": "1.0.0",
+  "name": "base-ts",
+  "version": "0.1.0",
   "author": "ariym",
-  "description": "Boilerplate for typescript and nodemon.",
+  "description": "Boilerplate and template for typecsript projects.",
   "main": "dist/index.js",
-
   "scripts": {
     "start": "npm run dev",
-    "dev": "nodemon"
+    "dev": "tsx --watch --env-file=.env src/index.ts",
+    "build": "pkgroll --env-file=.env index.ts",
+    "prod": "npm run build && node dist/index.js"
   },
-  
   "devDependencies": {
-    "@types/node": "^18.11.17",
-    "nodemon": "^2.0.20",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.9.3"
-  },
-  
-  "dependencies": {},
-
-  "nodemonConfig": {
-    "env": { "NODE_ENV": "development" },
-    "watch": ["./**/*.ts"],
-    "exec": "ts-node index.ts" ,
-    "ext": "js, json, ts, proto",
-    "delay": "500ms"
+    "@types/node": "^22.10.2",
+    "pkgroll": "^2.6.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
   }
 }

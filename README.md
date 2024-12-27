@@ -20,3 +20,7 @@ npm i
 
 1. In order to use a .env file first ensure that at least one exists. (.env, .env.development, .env.production)
 1. Then add this to the package.json dev/prod scripts `--env-file=.env` *after* the `node` or `tsx` word respectively.
+
+## TODO
+
+- [ ] replace `npm run setup` with with setup.js that uses cli to ask about setting up .env, .env.production, etc.

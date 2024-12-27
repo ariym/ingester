@@ -8,7 +8,8 @@
     "start": "npm run dev",
     "dev": "tsx --watch --env-file=.env src/index.ts",
     "build": "pkgroll --env-file=.env index.ts",
-    "prod": "npm run build && node dist/index.js"
+    "prod": "npm run build && node dist/index.js",
+    "setup": "npm install && npm run dev"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",

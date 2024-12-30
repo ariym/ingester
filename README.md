@@ -14,9 +14,13 @@ git clone https://github.com/ariym/base-ts
 npm i
 ```
 
-## Enviroment Variables
+## Advanced Setup
 
-> As of **Node v20.6** .env have built in support no longer require the use of dotenv.
+[pkgroll instructions for using dir other than `src`](https://github.com/privatenumber/pkgroll?tab=readme-ov-file#entry-points) are to add `--src=dirname` flag to pkgroll command in the package.json scripts
+
+### Enviroment Variables
+
+> As of **Node v20.6** added .env file support deprecating the need for dotenv.
 
 1. In order to use a .env file first ensure that at least one exists. (.env, .env.development, .env.production)
 1. Then add this to the package.json dev/prod scripts `--env-file=.env` *after* the `node` or `tsx` word respectively.

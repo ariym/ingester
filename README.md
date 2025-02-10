@@ -1,4 +1,4 @@
-# ts-nodemon
+# base-ts
 
 Starter boilerplate for typescript projects.
 

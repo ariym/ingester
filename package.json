@@ -9,7 +9,7 @@
     "dev": "tsx --watch --env-file=.env src/index.ts",
     "build": "pkgroll --env-file=.env index.ts",
     "prod": "npm run build && node dist/index.js",
-    "setup": "npm install && npm run dev"
+    "setup": "npm install && mkdir data && npm run dev"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.7"
+    "sqlite3": "^5.1.7",
+    "video-extensions": "^2.0.0"
   }
 }

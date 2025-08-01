@@ -6,9 +6,9 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "tsx --watch --env-file=.env src/index.ts",
-    "build": "pkgroll --env-file=.env index.ts",
-    "prod": "npm run build && node dist/index.js",
+    "dev": "tsx --env-file=.env --watch src/index.ts",
+    "build": "pkgroll index.ts",
+    "prod": "npm run build && node --env-file=.env dist/index.js",
     "setup": "npm install && mkdir data && npm run dev"
   },
   "devDependencies": {

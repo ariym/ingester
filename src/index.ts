@@ -1,5 +1,6 @@
-function saySomething(msg: string): void {
-  console.log(msg);
-}
+import cli from './cli'
 
-saySomething('pizza');
+// run the CLI so that the user can populate the database
+cli()
+
+// waits for URLs to be added to FILES database

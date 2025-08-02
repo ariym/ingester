@@ -9,7 +9,9 @@
     "dev": "tsx --env-file=.env --watch src/index.ts",
     "build": "pkgroll index.ts ",
     "prod": "npm run build && node --env-file=.env dist/index.js",
-    "setup": "npm install && mkdir data && touch data/mydb.sqlite && npm run dev"
+    "init:db": "mkdir data && touch data/mydb.sqlite",
+    "reset:db": "rm -r data && npm run init:db",
+    "setup": "npm install && npm run init:db  && npm run dev"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.8",
@@ -21,7 +23,7 @@
   },
   "dependencies": {
     "@inquirer/prompts": "^7.8.0",
-    "sqlite": "^5.1.1",
-    "sqlite3": "^5.1.7"
+    "better-sqlite3": "^12.2.0",
+    "sqlite": "^5.1.1"
   }
 }

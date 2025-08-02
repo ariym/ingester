@@ -23,7 +23,7 @@ export default async function cli() {
         {
           name: "Init DB",
           value: 'INIT_DB',
-          description: "First time running. Creates tables."
+          description: "Only for first time running."
         },
         {
           name: 'Quit',

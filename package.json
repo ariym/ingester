@@ -11,7 +11,8 @@
     "prod": "npm run build && node --env-file=.env dist/index.js",
     "init:db": "mkdir data && touch data/mydb.sqlite",
     "reset:db": "rm -r data && npm run init:db",
-    "setup": "npm install && npm run init:db  && npm run dev"
+    "setup": "npm install && npm run init:db  && npm run dev",
+    "test": "tsx --env-file=.env test/runner.ts"
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.8",
@@ -24,6 +25,7 @@
   "dependencies": {
     "@inquirer/prompts": "^7.8.0",
     "better-sqlite3": "^12.2.0",
+    "bullmq": "^5.56.9",
     "sqlite": "^5.1.1"
   }
 }

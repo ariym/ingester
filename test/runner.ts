@@ -25,7 +25,6 @@ async function loadAllDefaults<T = any>(dir: string) {
 // Loop through the tests in this directory and log the results
 export default async function runTests() {
   const tests = await loadAllDefaults(__dirname);
-  // const tests = {john: ()=>console.log("hi")}
 
   let failCount = 0;
   let testResults = {}
@@ -43,11 +42,10 @@ export default async function runTests() {
 
   console.table(testResults);
 
-  if(failCount > 0) {
+  if (failCount > 0) {
     console.log(failCount, "tests FAILED!");
   } else {
     console.log("All tests succeeded : )");
-    console.log("fails",failCount)
   }
 
   return failCount;
